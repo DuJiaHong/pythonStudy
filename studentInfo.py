@@ -18,6 +18,7 @@ def load_data():
             stu_key[key_info[0]] = key_info[1]
             # print(stu_key)
         info.append(stu_key)
+    f.close()
     return info
 
 
@@ -80,10 +81,11 @@ def studentInfo():
         name,55;age,44;
     :return:
     """
+    # 判断本地数据文件是否存在，否则则创建一个空的列表
     if os.path.exists(path):
         info = load_data()
     else:
-        info = list()
+        info = ()
     print("欢迎登陆学生信息系统")
     while True:
         print("1.学生信息查看")
