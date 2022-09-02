@@ -25,3 +25,8 @@ elif a > 40:
     print("休息")
 else:
     print("养着")
+    # raise "eeeeerinfo"
+
+import package
+
+package.game()
